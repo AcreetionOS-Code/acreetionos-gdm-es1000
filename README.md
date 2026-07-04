@@ -73,8 +73,21 @@ driver for hardware-accelerated 2D rendering:
 ## Quick Apply
 
 ```bash
-sudo ./scripts/apply.sh
+sudo ./scripts/apply.sh              # Apply all patches
+sudo ./scripts/apply.sh --dry-run    # Preview without making changes
+sudo ./scripts/apply.sh --force      # Re-apply even if already applied
 ```
+
+## Dry-Run Mode
+
+Preview what the script would do without making any changes:
+
+```bash
+sudo ./scripts/apply.sh --dry-run
+```
+
+The script is **idempotent** — safe to run multiple times. It detects
+when files are already up-to-date and skips them.
 
 ## Tested On
 
@@ -90,5 +103,9 @@ sudo ./scripts/apply.sh
 
 ## License
 
-Do whatever you want. This is configuration, not code. If it burns your house
-down, you get to keep the insurance money.
+MIT License — see [LICENSE](LICENSE) for details.
+
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on reporting issues
+and submitting changes.
