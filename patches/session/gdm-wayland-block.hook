@@ -1,0 +1,11 @@
+[Trigger]
+Operation = Install
+Operation = Upgrade
+Type = Package
+Target = gdm
+Target = gnome-shell
+
+[Action]
+Description = Blocking Wayland GNOME sessions...
+When = PostTransaction
+Exec = /usr/bin/bash -c "if [ -f /usr/share/wayland-sessions/gnome.desktop ]; then mv /usr/share/wayland-sessions/gnome.desktop /usr/share/wayland-sessions/gnome.desktop.bak; fi"

@@ -1,0 +1,36 @@
+[org/gnome/desktop/interface]
+# Reduce font rendering overhead
+font-name="Cantarell 10"
+document-font-name="Cantarell 10"
+monospace-font-name="Source Code Pro 10"
+text-scaling-factor=1.0
+
+[org/gnome/desktop/wm/preferences]
+# Disable animations
+visual-bell-type=false
+num-workspaces=1
+
+[org/gnome/shell]
+# Disable hot corners
+enable-hot-corners=false
+
+[org/gnome/mutter]
+# Disable edge tiling
+edge-tiling=false
+# Disable dynamic workspaces
+dynamic-workspaces=false
+# Attach modal dialogs
+attach-modal-dialogs=false
+
+[org/gnome/desktop/background]
+# Use solid color instead of wallpaper
+picture-options="none"
+picture-uri=""
+picture-uri-dark=""
+primary-color="#000000"
+secondary-color="#000000"
+
+[org/gnome/settings-daemon/plugins/power]
+# Disable screen blanking during login
+sleep-inactive-ac-timeout=0
+sleep-inactive-ac-type="nothing"
